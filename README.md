@@ -15,6 +15,7 @@ This repository contains a collection of config files and information about my d
 * Rofi application launcher
 * Pulsaudio
 * Wicd & Wicd-GTK as network manager (mainly for Wifi)
+* Thunar file browser
 
 ### Additional Tools
 
@@ -44,7 +45,7 @@ This repository contains a collection of config files and information about my d
 3. Install graphical environment
 
   ```shell
-  $ sudo apt-get install -y xorg lightdm i3
+  $ sudo apt-get install -y xorg lightdm i3 i3blocks feh
   ```
 
 4. Add some nice eyecandy
