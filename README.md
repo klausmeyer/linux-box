@@ -45,7 +45,7 @@ This repository contains a collection of config files and information about my d
 3. Install graphical environment
 
   ```shell
-  $ sudo apt-get install -y xorg lightdm i3 i3blocks feh
+  $ sudo apt-get install -y xorg lightdm i3 i3blocks feh rofi
   ```
 
 4. Add some nice eyecandy
