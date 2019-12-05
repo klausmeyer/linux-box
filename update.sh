@@ -4,6 +4,7 @@ files=(
   /etc/apt/sources.list
   /etc/apt/sources.list.d/atom.list
   /etc/apt/sources.list.d/docker.list
+  ~/.Xresources
   ~/.Xmodmap
   ~/.config/compton.conf
   ~/.config/gtk-3.0/settings.ini
