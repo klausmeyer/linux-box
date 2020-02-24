@@ -139,6 +139,11 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+workspace $ws1 output primary
+workspace $ws2 output primary
+workspace $ws3 output primary
+workspace $ws4 output primary
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -206,8 +211,11 @@ for_window [title="Write:.*" class="Thunderbird"] floating enable
 bindsym $mod+d exec rofi -show run -theme Arc-Dark
 
 bindsym Control+$mod+l exec ~/bin/bye lock
+bindsym Control+$mod+q exec ~/bin/bye mem
 
 # bindsym $mod+u [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
+
+exec --no-startup-id xrandr --output HDMI1 --primary --output DP1 --right-of HDMI1
 
 exec --no-startup-id feh --bg-scale ~/Pictures/Wallpaper/current
 exec --no-startup-id blueman-applet
