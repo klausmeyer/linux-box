@@ -208,7 +208,12 @@ for_window [title="Write:.*" class="Thunderbird"] floating enable
 # for_window [instance="dropdown"] border pixel 3
 # exec --no-startup-id /usr/bin/uxterm -n dropdown
 
-bindsym $mod+d exec rofi -show run -theme Arc-Dark
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+bindsym $mod+d exec rofi -show run -theme Arc-Dark -m primary
+bindsym $mod+Tab exec rofi -show window -theme Arc-Dark -m primary
 
 bindsym Control+$mod+l exec ~/bin/bye lock
 bindsym Control+$mod+q exec ~/bin/bye mem
