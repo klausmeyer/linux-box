@@ -32,7 +32,8 @@ hide_edge_borders both
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec /usr/bin/uxterm -ls
+# bindsym $mod+Return exec /usr/bin/uxterm -ls
+bindsym $mod+Return exec /usr/bin/x-terminal-emulator
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -187,6 +188,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+        font pango:System San Francisco Display 11
         status_command i3blocks
         tray_output HDMI1
 
@@ -217,16 +219,17 @@ bindsym $mod+d exec rofi -show run -theme Arc-Dark -m primary
 bindsym $mod+Tab exec rofi -show window -theme Arc-Dark -m primary
 
 bindsym Control+$mod+l exec ~/bin/bye lock
-bindsym Control+$mod+q exec ~/bin/bye mem
+# bindsym Control+$mod+q exec ~/bin/bye mem
 
 # bindsym $mod+u [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
 
 exec --no-startup-id xrandr --output HDMI1 --primary --output DP1 --right-of HDMI1
 
-exec --no-startup-id feh --bg-scale ~/Pictures/Wallpaper/current
+exec --no-startup-id feh --bg-scale ~/Pictures/Wallpaper/current-left ~/Pictures/Wallpaper/current-right
 exec --no-startup-id blueman-applet
+exec --no-startup-id caffeine-indicator
 exec --no-startup-id parcellite
-exec --no-startup-id dropbox start
+# exec --no-startup-id dropbox start
 exec --no-startup-id compton -f
 exec --no-startup-id xrdb -load ~/.Xresources
 exec --no-startup-id xmodmap ~/.Xmodmap

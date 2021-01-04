@@ -33,13 +33,18 @@ markup=none
 # The first parameter sets the step (and units to display)
 # The second parameter overrides the mixer selection
 # See the script for details.
-[volume]
-label=VOL:
-#label=♪
-instance=Master
-#instance=PCM
+# [volume]
+# label=Volume:
+# # label=♪
+# instance=Master
+# # instance=PCM
+# interval=1
+# signal=10
+
+[volume-pulseaudio]
+command=/home/meyer/.config/i3blocks/scripts/volume-pulseaudio
 interval=1
-signal=10
+signal=1
 
 # Memory usage
 #
@@ -77,9 +82,11 @@ interval=10
 # separator=false
 
 [wifi]
-label=WIFI:
+command=/home/meyer/.config/i3blocks/scripts/wifi
+label=Wifi:
 instance=wlp2s0
 interval=10
+
 # separator=false
 
 # [bandwidth]
